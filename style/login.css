@@ -1,0 +1,66 @@
+/* CSS Code (style.css) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+.menu.active {
+    display: block;
+}
+
+h2 {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#forgot-password-link {
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#forgot-password-link:hover {
+    text-decoration: underline;
+}
