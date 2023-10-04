@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --font-poppins: Poppins;
+    --bg-color: #0084ff;
+    --font-color: #FFFFFF;
+}
+
+body {
+    font-family: var(--font-poppins);
+}
+
+/* Login Awal */
+.card-first {
+    background: var(--bg-color);
+    color: var(--font-color);
+    border-radius: 10px;
+    border: var(--bg-color);
+}
+
+.card-first a {
+    color: var(--bg-color);
+    width: 200px;
+}
+
+.card-first img  {
+    width: 200px;
+    margin-top: -15vh;
+}
+
+/* Login Admin */
+.login-admin {
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+
+.card-col {
+    background: var(--bg-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-first-admin {
+    background: var(--bg-color);
+    color: var(--font-color);
+    width: 400px;
+    border: var(--bg-color);
+}
+
+.card-first-admin form {
+    width: 330px;
+}
+
+.card-first-admin a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.card-first-admin button {
+    color: var(--bg-color);
+    width: 200px;
+}
+
