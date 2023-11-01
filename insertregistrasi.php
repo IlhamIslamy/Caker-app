@@ -24,17 +24,16 @@ header("Content-Type: application/json");
         $username = $_POST['username'];
         
         // ng ng jero [] inputen se
-        $id_pelamar = $_POST['id_pelamar'];
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $nama_lengkap = $_POST['nama_lengkap'];
+        $email = $_POST['email'];
         $no_telp = $_POST['no_telp'];
         $alamat = $_POST['alamat'];
 
         $epassword = password_hash($password, PASSWORD_BCRYPT);
 
         // amebk queri ne gantien sisan
-        $sql = "INSERT INTO akun_pelamar VALUES ('$randomString', '$username', '$password', '$nama_lengkap', '$no_telp', '$alamat')";
+        $sql = "INSERT INTO akun_pelamar VALUES ('$randomString', '$username', '$password', '$email', '$no_telp', '$alamat')";
         $result = $conn->query($sql);
 
         if($result === true){
