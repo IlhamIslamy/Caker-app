@@ -1,46 +1,50 @@
 <!-- Sidebar Menu -->
 <nav class="mt-2">
   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-    <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+    <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
     <li class="nav-item">
-      <a href="index.php?page=dashboard" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
+      <a href="index.php?page=dashboard-user"
+        class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'dashboard-user') ? 'active' : ''; ?>">
+        <i class="nav-icon fas fa-life-ring"></i>
         <p>
           Dashboard
-          <span class="right badge badge-danger">New</span>
         </p>
       </a>
     </li>
-    <li class="nav-item menu-open">
-      <a href="#" class="nav-link active">
-        <i class="nav-icon fas fa-gamepad"></i>
+    <li
+      class="nav-item <?php echo (isset($_GET['page']) && ($_GET['page'] == 'post_user' || $_GET['page'] == 'userkategori')) ? 'menu-open' : ''; ?>">
+      <a href="#"
+        class="nav-link <?php echo (isset($_GET['page']) && ($_GET['page'] == 'post_user' || $_GET['page'] == 'userkategori')) ? 'active' : ''; ?>">
+        <i class="nav-icon fas fa-briefcase"></i>
         <p>
-          mboh wes aku ngelu
+          List Tugas
           <i class="right fas fa-angle-left"></i>
         </p>
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="index.php?page=userpost" class="nav-link active">
+          <a href="index.php?page=post_user"
+            class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'post_user') ? 'active' : ''; ?>">
             <i class="far fa-circle nav-icon"></i>
             <p>POST</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="index.php?page=userkategori" class="nav-link">
+          <a href="index.php?page=userkategori"
+            class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'userkategori') ? 'active' : ''; ?>">
             <i class="far fa-circle nav-icon"></i>
             <p>KATEGORI</p>
           </a>
         </li>
       </ul>
-    <li class="nav-item">
-      <a href="logout.php" class="nav-link text-red">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          logout
-          <span class="right badge badge-danger">New</span>
-        </p>
-      </a>
     </li>
+    <li class="nav-item">
+            <a href="#" class="nav-link text-red" onclick="logout()">
+                <i class="nav-icon fas  fa-arrow-circle-left"></i>
+                <p>
+                    Logout
+                </p>
+            </a>
+        </li>
+  </ul>
 </nav>

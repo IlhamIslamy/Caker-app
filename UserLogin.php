@@ -19,52 +19,37 @@
   <link rel="stylesheet" href="app/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 
 </head>
-
 <body class="hold-transition login-page">
-  <div class="login-box">
-    <!-- /.login-logo -->
-    <div class="card card-outline card-primary">
-      <div class="card-header text-center">
-        <a href="app/index2.html" class="h1"><b>Admin</b>Caker</a>
-      </div>
-      <div class="card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-        <!-- aksinya -->
-        <form action="conf/autentikasi.php" method="post">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name='username'>
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a href="index.html" class="h1"><b>User</b>Caker</a>
             </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name='password'>
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div> -->
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
-          </div>
-          <!-- /.col -->
-      </div>
-      </form>
-
-      <div class="social-auth-links text-center mt-2 mb-3">
+            <div class="card-body">
+                <p class="login-box-msg">Login untuk memulai sesi Anda</p>
+                <form action="conf/autentikasi.php" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" name='username' required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Password" name='password' required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menambahkan input tersembunyi untuk menentukan level -->
+                    <input type="hidden" name="login_as" value="user">
+                    <div class="col-4 mx-auto text-center">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                    <div class="social-auth-links text-center mt-2 mb-3">
 
         <!-- login fb -->
         <!-- <a href="#" class="btn btn-block btn-primary">
@@ -72,24 +57,24 @@
         </a> -->
 
         <!-- login google -->
-        <a href="#" class="btn btn-block btn-danger">
+        <!-- <a href="#" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
         </a>
-      </div>
+      </div> -->
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
-      <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
-      </p>
+          <a href="lupa-password.php">Lupa kata sandi?</a>
+        </p>
+        <p class="mb-0">
+          <a href="register.php" class="text-center">Daftar sebagai anggota baru</a>
+        </p>
     </div>
-    <!-- /.card-body -->
-  </div>
-  <!-- /.card -->
-  </div>
-  <!-- /.login-box -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
 
   <!-- jQuery -->
   <script src="app/plugins/jquery/jquery.min.js"></script>
@@ -99,8 +84,6 @@
   <script src="app/dist/js/adminlte.min.js"></script>
   <!-- SweetAlert2 -->
   <script src="app/plugins/sweetalert2/sweetalert2.min.js"></script>
-
-</body>
 
 <!-- notif gagal login -->
 <?php

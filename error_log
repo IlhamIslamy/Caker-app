@@ -1,0 +1,2 @@
+[01-Dec-2023 19:15:58 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tifz1761/public_html/caker/vendor/phpmailer/phpmailer/src/SMTP.php:300) in /home/tifz1761/public_html/caker/conf/reset-password.php on line 33
+[05-Dec-2023 21:32:16 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tifz1761/public_html/caker/vendor/phpmailer/phpmailer/src/SMTP.php:300) in /home/tifz1761/public_html/caker/conf/reset-password.php on line 33
